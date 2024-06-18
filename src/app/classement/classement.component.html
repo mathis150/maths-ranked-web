@@ -2,55 +2,10 @@
     <div class="mr-classement--base">
         <table class="mr-classement">
             <tbody>
-                <tr class="mr-class--top">
-                    <td class="mr-class--top--class">1</td>
-                    <td class="mr-class--top--name" >Mathis</td>
-                    <td class="mr-class--top--pts"  >3000pts</td>
-                </tr>
-                <tr class="mr-class--second">
-                    <td class="mr-class--second--class">2</td>
-                    <td class="mr-class--second--name" >Mathis</td>
-                    <td class="mr-class--second--pts"  >3000pts</td>
-                </tr>
-                <tr class="mr-class--third">
-                    <td class="mr-class--third--class">3</td>
-                    <td class="mr-class--third--name" >Mathis</td>
-                    <td class="mr-class--third--pts"  >3000pts</td>
-                </tr>
-                <tr class="mr-class--other">
-                    <td class="mr-class--other--class">4</td>
-                    <td class="mr-class--other--name" >Mathis</td>
-                    <td class="mr-class--other--pts"  >3000pts</td>
-                </tr>
-                <tr class="mr-class--other">
-                    <td class="mr-class--other--class">5</td>
-                    <td class="mr-class--other--name" >Mathis</td>
-                    <td class="mr-class--other--pts"  >3000pts</td>
-                </tr>
-                <tr class="mr-class--other">
-                    <td class="mr-class--other--class">6</td>
-                    <td class="mr-class--other--name" >Mathis</td>
-                    <td class="mr-class--other--pts"  >3000pts</td>
-                </tr>
-                <tr class="mr-class--other">
-                    <td class="mr-class--other--class">7</td>
-                    <td class="mr-class--other--name" >Mathis</td>
-                    <td class="mr-class--other--pts"  >3000pts</td>
-                </tr>
-                <tr class="mr-class--other">
-                    <td class="mr-class--other--class">8</td>
-                    <td class="mr-class--other--name" >Mathis</td>
-                    <td class="mr-class--other--pts"  >3000pts</td>
-                </tr>
-                <tr class="mr-class--other">
-                    <td class="mr-class--other--class">9</td>
-                    <td class="mr-class--other--name" >Mathis</td>
-                    <td class="mr-class--other--pts"  >3000pts</td>
-                </tr>
-                <tr class="mr-class--other">
-                    <td class="mr-class--other--class">10</td>
-                    <td class="mr-class--other--name" >Mathis</td>
-                    <td class="mr-class--other--pts"  >3000pts</td>
+                <tr class="mr-class--top" *ngFor="let element of classement; let  i = index;" [class.mr-class--top]="i == 0" [class.mr-class--second]="i == 1" [class.mr-class--third]="i == 2" [class.mr-class--other]="i > 2">
+                    <td [class.mr-class--top--class]="i == 0" [class.mr-class--second--class]="i == 1" [class.mr-class--third--class]="i == 2" [class.mr-class--other--class]="i > 2">{{ i + 1 }}</td>
+                    <td [class.mr-class--top--name]="i == 0" [class.mr-class--second--name]="i == 1" [class.mr-class--third--name]="i == 2" [class.mr-class--other--name]="i > 2">{{ element.pseudonyme }}</td>
+                    <td [class.mr-class--top--pts]="i == 0" [class.mr-class--second--pts]="i == 1" [class.mr-class--third--pts]="i == 2" [class.mr-class--other--pts]="i > 2">{{ element.points }}pts</td>
                 </tr>
             </tbody>
         </table>
