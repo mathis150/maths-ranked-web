@@ -47,12 +47,23 @@ export class DiscussionComponent {
     .subscribe((data: any) => {
       if(data.status == 200)
       {
-        console.log('Message sent successfully');
+        this.chatForm.reset();
+        
+        window.location.reload();
       }
     });
   }
 
   onDelete(id: number) {
+    console.log('Deleting message with id: ' + id);
     this.discussionService.deleteMessage(id)
+    .subscribe((data: any) => {
+      if(data.status == 200)
+      {
+        this.chatForm.reset();
+
+        window.location.reload();
+      }
+    });
   }
 }
