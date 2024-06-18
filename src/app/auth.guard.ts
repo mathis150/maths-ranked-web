@@ -16,4 +16,6 @@ export const AuthGuard = () => {
             return true
         }
     })
+
+    return true; // Add this line to return a value in all code paths
 }

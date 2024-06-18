@@ -8,9 +8,12 @@ export function authInterceptor(req: HttpRequest<unknown>, next: HttpHandlerFn):
   const token = auth.token
   const logged = auth.login()
 
-  if (!logged) { 
-    return next(req)
-  }
+  logged.subscribe((res: any) => {
+    if(res.status != 200)
+    {
+      return next(req)
+    }
+  })
 
   const headers = new HttpHeaders({
     Authorization: String(token)
