@@ -1,0 +1,50 @@
+<div class="mr-space mr-register">
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form [formGroup]="loginForm" [class.hidden]="action!='login'">
+        <div class="mr-login">
+            <label for="username">Pseudonyme</label>
+            <input type="text" placeholder="Pseudonyme" id="username" formControlName="username_login" style="background: #efefef; width: calc(100% - 30px);">
+            <div style="margin-bottom: 30px; font-size: 12px;"><p *ngIf="getErrorMessage('username_login')">{{ getErrorMessage('username_login') }}</p></div>
+
+            <label for="password">Password</label>
+            <input type="password" placeholder="Password" id="password" formControlName="password_login" style="background: #efefef; width: calc(100% - 30px);">
+            <div style="margin-bottom: 30px; font-size: 12px;"><p *ngIf="getErrorMessage('password_login')">{{ getErrorMessage('password_login') }}</p></div>
+
+            <div style="margin-bottom: 30px; font-size: 12px; color: #c40000"><p *ngIf="loginError != ''">{{ loginError }}</p></div>
+
+            <button class="mr-login-button" (click)="onLogin()" [disabled]="!loginForm.valid">Connexion</button>
+            
+            <p style="margin-top: 20px;">Pas encore inscrit ?</p>
+            <a href="./login?action=register" style="color: #D29500">S'inscrire maintenant !</a>
+        </div>
+    </form>
+    <form [formGroup]="registerForm" [class.hidden]="action!='register'">
+        <div class="mr-login">
+            <label for="username2">Pseudonyme</label>
+            <input type="text" placeholder="Pseudonyme" id="username2" formControlName="username" style="background: #efefef; width: calc(100% - 30px);">
+            <div style="margin-bottom: 30px; font-size: 12px;"><p *ngIf="getErrorMessage('username')">{{ getErrorMessage('username') }}</p></div>
+
+            <label for="email">E-Mail</label>
+            <input type="email" placeholder="E-mail" id="email" formControlName="email" style="background: #efefef; width: calc(100% - 30px);">
+            <div style="margin-bottom: 30px; font-size: 12px;"><p *ngIf="getErrorMessage('username')">{{ getErrorMessage('email') }}</p></div>
+
+            <label for="password_reg">Mot de passe</label>
+            <input type="password" placeholder="Mot de passe" id="password_reg" formControlName="password" style="background: #efefef; width: calc(100% - 30px);">
+            <div style="margin-bottom: 30px; font-size: 12px;"><p *ngIf="getErrorMessage('username')">{{ getErrorMessage('password') }}</p></div>
+
+            <label for="password2">Confirmer le mot de passe</label>
+            <input type="password" placeholder="Mot de passe" id="password2" formControlName="password2" style="background: #efefef; width: calc(100% - 30px);">
+            <div style="margin-bottom: 30px; font-size: 12px;"><p *ngIf="getErrorMessage('username')">{{ getErrorMessage('password2') }}</p></div>
+
+            <div style="margin-bottom: 30px; font-size: 12px; color: #c40000"><p *ngIf="registerError != ''">{{ registerError }}</p></div>
+
+            <button class="mr-login-button" (click)="onLogin()" [disabled]="!registerForm.valid">Incription</button>
+            
+            <p style="margin-top: 20px;">Déjà inscrit ?</p>
+            <a href="./login?action=login" style="color: #D29500">Se connecter maintenant !</a>
+        </div>
+    </form>
+</div>

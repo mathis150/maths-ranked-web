@@ -1,0 +1,37 @@
+.mr-space {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: calc(100vh - 212px);
+    padding: 30px
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    display: none !important;
+}
+.mr-form {
+    display: grid;
+    grid-template-columns: 1.75fr 0.25fr;
+}
+.mr-form--buton {
+    padding: 10px;
+    color: #fff;
+    background: #ca8a04;
+}
+.mr-form--buton:hover {
+    background: #b88400;
+    color: #FFF;
+}
+.mr-form--buton:disabled {
+    background: #fedb80;
+    color: #FFF;
+}

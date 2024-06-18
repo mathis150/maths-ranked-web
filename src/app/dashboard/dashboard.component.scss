@@ -1,0 +1,45 @@
+.mr-space {
+    align-items: left; justify-content: center; align-items: center; width: 100%; min-height: calc(100vh - 212px);
+}
+
+.mr-card {
+    background: #FFFFFF;
+    border: 5px solid #3E3E3E;
+    border-radius: 10px;
+    margin: 20px 0;
+    overflow: hidden;
+    text-align: center;
+    width: 400px;
+}
+.mr-card:nth-child(even) {
+    margin-left: 30px;
+}
+.mr-card--title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+.mr-card--battle {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.mr-card--victory {
+    width: 100%;
+    background: #2ecc71;
+    padding: 25px 0;
+}
+.mr-card--defeat {
+    width: 100%;
+    background: #e74c3c;
+    padding: 25px 0;
+}
+.mr-card--points {
+    width: 100%;
+    background: #f1c40f;
+    padding: 25px 0;
+}
+.mr-card--value {
+    font-size: 24px;
+    font-weight: 700;
+}

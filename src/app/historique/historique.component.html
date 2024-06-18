@@ -1,0 +1,21 @@
+<div class="mx-auto max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3 flex flex-col mr-space">
+    <div class="mr-classement--base">
+        <table class="mr-classement">
+            <thead>
+                <tr class="mr-class--top">
+                    <td>Joueur 1</td>
+                    <td class="mr-td--center">Résultat du match</td>
+                    <td class="mr-td--right">Joueur 2</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="mr-class--other" *ngFor="let element of list;">
+                    <td [class.mr-class--other--victory]="element.user_one == userId && element.victory_to == userId" [class.mr-class--other--defeat]="element.victory_to != element.user_one">{{ element.user_one_name }}</td>
+                    <td class="mr-class--other--pts" [class.hidden]="element.victory_to != userId">Victoire</td>
+                    <td class="mr-class--other--pts" [class.hidden]="element.victory_to == userId">Défaite</td>
+                    <td class="mr-td--right" [class.mr-class--other--victory]="element.victory_to == element.user_two" [class.mr-class--other--defeat]="element.victory_to != element.user_two">{{ element.user_two_name }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

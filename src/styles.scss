@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap');
+
+body {
+    background: #F4D382;
+    overflow-x: hidden;
+}
+.bg-mr-yellow-base {
+    background: #F4D382;
+}
+span.mr-active {
+    background: #FD675A;
+    height: 5px;
+    width: 60%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.mr-nav-button {
+    font-family: 'Sedgwick Ave', cursive;
+    font-size: 20px;
+    height: 30px;
+    overflow: visible;
+}
+a.mr-active{
+    height: auto;
+}

@@ -1,0 +1,12 @@
+<div class="mr-space">
+    <form class="mr-form" [formGroup]="chatForm">
+        <input type="text" formControlName="message">
+        <button class="mr-form--buton" (click)="onSubmit()" [disabled]="!chatForm.valid">Envoyer le message</button>
+    </form>
+    <div>
+        <div style="margin-top: 20px; width: 100%; background: #f6f6f6; padding: 15px;" *ngFor="let element of messages;">
+            <p style="font-size: 18px;">{{ element.user_name }} <button class="mr-form--buton" [class.hidden]="userRank != 2" (click)="onSubmit()">Supprimer</button></p>
+            <p>> {{ element.message }}</p>
+        </div>
+    </div>
+</div>

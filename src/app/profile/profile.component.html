@@ -1,0 +1,15 @@
+<div class="mr-space">
+    <div style="width: 800px; background: #FFF; padding: 25px;" [class.hidden]="action == 'edit'">
+        <p style="font-size: 18px;">{{ username }} <a href="/users/profil?action=edit" style="margin-right: 20px;"><button class="mr-form--buton">Éditer</button></a> <button class="mr-form--buton" (click)="onLogout()">Déconnexion</button></p>
+        <p [class.hidden]="userDescription == undefined">{{ userDescription }}</p>
+    </div>
+    <div style="width: 800px; background: #FFF; padding: 25px;" [class.hidden]="action != 'edit'">
+        <form [formGroup]="profileForm">
+            <label for="username">Nom d'utilisateur</label>
+            <input type="text" id="username" name="username" style="width: 300px; background: #ececec; margin-bottom: 20px;" formControlName="pseudonyme" value="{{username}}">
+            <label for="userDescription">Description</label>
+            <textarea id="userDescription" name="userDescription" style="width: 500px; background: #ececec; margin-bottom: 20px; resize: none;" rows="8" formControlName="description" value="{{userDescription}}"></textarea>
+            <button class="mr-form--buton" [disabled]="!profileForm.valid" (click)="onSubmit()">Enregistrer</button>
+        </form>
+    </div>
+</div>

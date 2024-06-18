@@ -1,0 +1,98 @@
+.mr-classement--base {
+    background: #FFFFFF;
+    border: 5px solid #3E3E3E;
+    border-radius: 10px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.mr-classement {
+    width: 600px;
+    font-size: 16px;
+    color: #3E3E3E;
+}
+
+.mr-class--top {
+    background: #F4D382;
+}
+
+.mr-class--top--class {
+    text-align: end;
+    width: 20px;
+}
+.mr-class--top--name {
+    width: 280px;
+}
+.mr-class--top--pts {
+    text-align: center;
+    background: #FFE6AA;
+    width: 100px;
+}
+
+.mr-class--second {
+    background: #CDCDCD;
+}
+.mr-class--second--class {
+    text-align: end;
+    width: 20px;
+}
+.mr-class--second--name {
+    width: 280px;
+}
+.mr-class--second--pts {
+    text-align: center;
+    background: #EDEDED;
+    width: 100px;
+}
+
+.mr-class--third {
+    background: #D79D00;
+}
+.mr-class--third--class {
+    text-align: end;
+    width: 20px;
+}
+.mr-class--third--name {
+    width: 280px;
+}
+.mr-class--third--pts {
+    text-align: center;
+    background: #FFBA00;
+    width: 100px;
+}
+
+.mr-class--other {
+    background: #FFFFFF;
+}
+.mr-class--other:nth-child(even) {
+    background: #F0F0F0;
+}
+.mr-class--other--class {
+    text-align: end;
+    width: 20px;
+}
+.mr-class--other--name {
+    width: 280px;
+}
+.mr-class--other--pts {
+    text-align: center;
+    background: #D4D4D4;
+    width: 200px;
+}
+
+.mr-space {
+    align-items: left; justify-content: center; align-items: center; width: 100%; min-height: calc(100vh - 212px);
+}
+.mr-class--other--victory {
+    background: #2ecc71;
+}
+.mr-class--other--defeat {
+    background: #e74c3c;
+    color: #FFF;
+}
+.mr-td--center {
+    text-align: center;
+}
+.mr-td--right {
+    text-align: right;
+}
