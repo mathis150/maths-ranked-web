@@ -14,6 +14,6 @@ export class DiscussionService {
   }
 
   deleteMessage(id: number) {
-    return this.http.delete('http://mrapi.mathis-lenoir.net/?action=deleteMessages&id=' + id)
+    return this.http.post('http://mrapi.mathis-lenoir.net/?action=deleteMessage&id=' + id, {})
   }
 }
